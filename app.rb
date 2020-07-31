@@ -22,6 +22,7 @@ class App < Sinatra::Base
     # set the :foo key of the session hash equal to 'hello' here!
     if session[:foo] == 'hello'
       session[:foo] = 'hello'
+      @session = session
     else
       "Session value has not been set!"
     end
